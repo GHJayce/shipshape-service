@@ -22,7 +22,7 @@ class FilterIllegalAttributes extends Action
         if (!$allowAttributes) {
             return null;
         }
-        $saveData = $context->getSaveData();
+        $saveData = array_intersect_key($context->getSaveData(), array_fill_keys($allowAttributes, 0));
         return compact('saveData');
     }
 }

@@ -13,6 +13,13 @@ class WriteStorageService extends BaseService
 {
     public function execute(Config $config, Context $context): mixed
     {
+        $param = $context->getParam();
+        $callableDataProcessors = $config::generateByActions($param->getDataProcessors());
+        $callableInputValidators = $config::generateByActions($param->getInputValidators());
+        $param->setDataProcessors($config->intoCallable($callableDataProcessors))
+            ->setInputValidators($config->intoCallable($callableInputValidators));
+        $context->setParam($param);
+
         $shipshapeContext = ShipshapeContext::make()->setClientContext($context);
         return $this->shipshape->execute($config, $shipshapeContext);
     }
