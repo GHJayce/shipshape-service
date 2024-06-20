@@ -2,7 +2,7 @@
 ## ShipshapeService
 
 ## Introduction
-
+Shipshape service.
 
 ## License
 

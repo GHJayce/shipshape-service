@@ -1,6 +1,15 @@
 {
     "name": "ghjayce/shipshape-service",
+    "description": "Shipshape service.",
+    "keywords": ["shipshape", "business"],
+    "license": "MIT",
     "type": "library",
+    "authors": [
+        {
+            "name": "GHJayce",
+            "email": "jaycedeng@outlook.com"
+        }
+    ],
     "require": {
         "php": ">=8.0",
         "ghjayce/shipshape": "dev-dev"
@@ -8,16 +17,14 @@
     "require-dev": {
         "phpunit/phpunit": "^11.2"
     },
-    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Ghjayce\\ShipshapeService\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "GHJayce",
-            "email": "jaycedeng@outlook.com"
+    "autoload-dev": {
+        "psr-4": {
+            "GhjayceTest\\ShipshapeService\\": "tests/"
         }
-    ]
+    }
 }
