@@ -9,13 +9,13 @@ use Ghjayce\ShipshapeService\Storage\Contract\WriteStorageInterface;
 
 /**
  * @method WriteStorageInterface getWriteStorage()
- * @method self setWriteStorage(WriteStorageInterface $writeStorage)
+ * @method $this setWriteStorage(WriteStorageInterface $writeStorage)
  * @method array getSaveData()
- * @method self setSaveData(array $saveData)
+ * @method $this setSaveData(array $saveData)
  * @method Param getParam()
- * @method self setParam(Param $param)
+ * @method $this setParam(Param $param)
  * @method mixed getWriteResult()
- * @method self setWriteResult(mixed $writeResult)
+ * @method $this setWriteResult(mixed $writeResult)
  */
 class Context extends ClientContext
 {

@@ -21,7 +21,7 @@ class ProcessData extends Action
      */
     public function handle(ClientContext $context, ShipshapeContext $shipshapeContext): ShipshapeContext
     {
-        $context->setSaveData($context->getParam());
+        $context->setSaveData($context->getParam()->getInputs());
         $validators = $context->getParam()->getDataProcessors();
         return $this->eachCallableActions($validators, $context, $shipshapeContext);
     }

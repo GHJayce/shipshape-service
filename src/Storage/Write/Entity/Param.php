@@ -9,13 +9,13 @@ use Ghjayce\ShipshapeService\Storage\Write\Action\ProcessData\FilterIllegalAttri
 
 /**
  * @method array getInputs()
- * @method self setInputs(array $inputs)
+ * @method $this setInputs(array $inputs)
  * @method array getAllowAttributes()
- * @method self setAllowAttributes(array $allowAttributes)
+ * @method $this setAllowAttributes(array $allowAttributes)
  * @method array getInputValidators()
- * @method self setInputValidators(array $inputValidators)
+ * @method $this setInputValidators(array $inputValidators)
  * @method array getDataProcessors()
- * @method self setDataProcessors(array $dataProcessors)
+ * @method $this setDataProcessors(array $dataProcessors)
  */
 class Param extends Property
 {
