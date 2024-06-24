@@ -14,15 +14,15 @@ class FilterIllegalAttributes extends Action
     /**
      * @param Context $context
      * @param ShipshapeContext $shipshapeContext
-     * @return array|null
+     * @return Context|null
      */
-    public function handle(ClientContext $context, ShipshapeContext $shipshapeContext): ?array
+    public function handle(ClientContext $context, ShipshapeContext $shipshapeContext): ?Context
     {
         $allowAttributes = $context->getParam()->getAllowAttributes();
         if (!$allowAttributes) {
             return null;
         }
         $saveData = array_intersect_key($context->getSaveData(), array_fill_keys($allowAttributes, 0));
-        return compact('saveData');
+        return $context->setSaveData($saveData);
     }
 }

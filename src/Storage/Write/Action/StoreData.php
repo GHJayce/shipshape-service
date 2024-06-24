@@ -14,11 +14,11 @@ class StoreData extends Action
     /**
      * @param Context $context
      * @param ShipshapeContext $shipshapeContext
-     * @return array
+     * @return Context
      */
-    public function handle(ClientContext $context, ShipshapeContext $shipshapeContext): array
+    public function handle(ClientContext $context, ShipshapeContext $shipshapeContext): Context
     {
         $writeResult = $context->getWriteStorage()->save($context->getSaveData());
-        return compact('writeResult');
+        return $context->setWriteResult($writeResult);
     }
 }
